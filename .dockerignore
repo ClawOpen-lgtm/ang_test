@@ -1,0 +1,39 @@
+# Dependencies
+node_modules
+npm-debug.log
+
+# Build outputs
+dist
+out-tsc
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git
+.gitignore
+.gitmodules
+
+# GitHub
+.github
+
+# Docker
+Dockerfile
+docker-compose.yml
+
+# CI
+.gitlab-ci.yml
+.travis.yml
+circle.yml
+
+# Misc
+README.md
+LICENSE
+CHANGELOG.md
