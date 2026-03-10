@@ -1,0 +1,24 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ang-test-ingress
+  namespace: ai-workloads
+  annotations:
+    # Use your ingress controller's annotations as needed
+    # For NGINX:
+    # nginx.ingress.kubernetes.io/rewrite-target: /
+    # For Traefik:
+    # traefik.ingress.kubernetes.io/router.entrypoints: web
+spec:
+  ingressClassName: nginx-external  # Change to your ingress class (e.g., nginx, traefik, etc.)
+  rules:
+    - host: linx.ai.hinterdorfer.dev
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ang-test-service
+                port:
+                  number: 80
